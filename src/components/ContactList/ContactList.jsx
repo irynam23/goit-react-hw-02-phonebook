@@ -1,4 +1,3 @@
-import css from './ContactList.module.css';
 import PropTypes from 'prop-types';
 import { ContactListItem } from 'components/ContactListItem/ContactListItem';
 
