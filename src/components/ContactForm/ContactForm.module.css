@@ -1,0 +1,27 @@
+.btn {
+  margin-top: 30px;
+  font-size: 18px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: dodgerblue;
+}
+
+.wrap {
+  display: flex;
+  flex-direction: column;
+
+  border: 3px solid black;
+  width: 300px;
+  padding: 20px;
+}
+
+.wrap input {
+  font-size: 14px;
+  padding: 5px;
+}

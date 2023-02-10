@@ -1,0 +1,21 @@
+.item:not(:last-child) {
+  margin-bottom: 20px;
+}
+
+.item {
+  font-size: 18px;
+}
+
+.btn {
+  margin-left: 30px;
+  padding: 5px;
+  border-radius: 5px;
+  border: 1px solid gray;
+  cursor: pointer;
+  font-size: 14px;
+}
+
+.btn:hover,
+.btn:active {
+  background-color: dodgerblue;
+}
