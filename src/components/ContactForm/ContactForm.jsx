@@ -9,7 +9,7 @@ export class ContactForm extends Component {
   };
 
   handleInputChange = ({ target }) => {
-    this.setState({ [target.name]: target.value.trim() });
+    this.setState({ [target.name]: target.value });
   };
 
   handleSubmit = e => {

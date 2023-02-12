@@ -34,23 +34,27 @@ export class App extends Component {
     this.setState({ filter: e.target.value.trim().toLowerCase() });
   };
 
-  render() {
-    const { filter, contacts } = this.state;
+  getFilteredContacts = () => {
+    return this.state.contacts.filter(({ name }) =>
+      name.toLowerCase().includes(this.state.filter)
+    );
+  };
 
-    const filteredContacts = contacts.filter(({ name }) => {
-      return name.toLowerCase().includes(filter);
-    });
+  render() {
+    const { contacts } = this.state;
+
+    const filteredContacts = this.getFilteredContacts();
+
     return (
       <div>
         <h1>Phonebook</h1>
         <ContactForm handleAddContact={this.handleAddContact} />
-
+        <h2>Contacts</h2>
         {contacts.length ? (
           <>
-            <h2>Contacts</h2>
             <Filter handleFilter={this.handleFilter} />
             <ContactList
-              contacts={filteredContacts || contacts}
+              contacts={filteredContacts}
               handleDelete={this.handleDelete}
             />
           </>
